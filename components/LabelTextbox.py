@@ -1,9 +1,9 @@
 from typing import Any
 from components.DefaultLabel import DefaultLabel
 from components.DefaultTextbox import DefaultTextbox
-from customtkinter import *
+from components.DefaultFrame import DefaultFrame
 
-class LabelTextbox(CTkFrame):
+class LabelTextbox(DefaultFrame):
     def __init__(self, 
         master: Any, 
         text: str = 'Text Label',
@@ -14,8 +14,8 @@ class LabelTextbox(CTkFrame):
         self.label = DefaultLabel(self, text=text)
         self.textbox = DefaultTextbox(self)
         
-        self.label.pack(anchor='w', padx=10)
-        self.textbox.pack(expand=True, fill=BOTH)
+        self.label.pack(anchor='w', padx=10, pady=(2, 0))
+        self.textbox.pack(expand=True, fill='both')
     
     def get(self, index1, index2):
         return self.textbox.get(index1, index2)

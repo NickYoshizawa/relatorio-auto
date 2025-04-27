@@ -1,35 +1,19 @@
-import customtkinter as ctk
 from components.DefaultEntry import DefaultEntry
 from components.DefaultLabel import DefaultLabel
+from components.DefaultFrame import DefaultFrame
 
 
 
-class LabelEntry(ctk.CTkFrame):
+class LabelEntry(DefaultFrame):
     def __init__(self,
         master,
         label_text="Text",
         show=None,
-        corner_radius=10,
-        border_width=0,
-        bg_color="transparent",
-        fg_color="transparent",
         placeholder_text=None,
-        border_color=None,
-        background_corner_colors=None,
-        overwrite_preferred_drawing_method=None,
         **kwargs
     ):
 
-        super().__init__(master,
-            corner_radius=corner_radius,
-            border_width=border_width,
-            bg_color=bg_color,
-            fg_color=fg_color,
-            border_color=border_color,
-            background_corner_colors=background_corner_colors,
-            overwrite_preferred_drawing_method=overwrite_preferred_drawing_method,
-            **kwargs
-        )
+        super().__init__(master, **kwargs)
 
 
         self.label = DefaultLabel(self, text=label_text)
