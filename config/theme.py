@@ -1,10 +1,20 @@
 # ------------------------
-# 🎨 Color Palette & Images
+# 📷 Images
 # ------------------------
 
-COLOR_BACKGROUND = "#1E1E1E"
-COLOR_FRAME = "#2B2B2B"
 WINDOW_ICON = "assets/icon/icon.ico"
+
+# ------------------------
+# 🖼️ Frame Styling
+# ------------------------
+
+FRAME_WIDTH = 400
+FRAME_HEIGHT = 300
+FRAME_CORNER_RADIUS = 10
+FRAME_BORDER_WIDTH = 1
+
+FRAME_BG_COLOR = "#2B2B2B"         
+FRAME_BORDER_COLOR = "#3F3F46"      
 
 # ------------------------
 # 🧱 Button Styling
