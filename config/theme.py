@@ -5,6 +5,12 @@
 WINDOW_ICON = "assets/icon/icon.ico"
 
 # ------------------------
+# 📂 File Types
+# ------------------------
+
+EXCEL_FILETYPES = [("Excel files", ".xlsx .xls")]
+
+# ------------------------
 # 🖼️ Frame Styling
 # ------------------------
 
@@ -21,7 +27,7 @@ FRAME_BORDER_COLOR = "#3F3F46"
 # ------------------------
 
 BUTTON_WIDTH = 120
-BUTTON_HEIGHT = 34
+BUTTON_HEIGHT = 35
 BUTTON_CORNER_RADIUS = 8
 BUTTON_BORDER_WIDTH = 0
 
@@ -45,7 +51,7 @@ BUTTON_DISABLED_COLOR = "#4B5563"
 BUTTON_DISABLED_TEXT_COLOR = "#9CA3AF"
 
 # Button Font
-BUTTON_FONT = ("Arial", 13, "bold")
+BUTTON_FONT = ("Arial", 13)
 
 # ------------------------
 # ✏️ Entry Styling
@@ -67,7 +73,7 @@ ENTRY_BORDER_COLOR = "#3F3F46"
 ENTRY_PLACEHOLDER_COLOR = "#9CA3AF"
 
 # Quando selecionado 
-ENTRY_FOCUS_BORDER_COLOR = "#2563EB"
+ENTRY_FOCUS_BORDER_COLOR = "#A78BFA"
 
 # ------------------------
 # 🏷️ Label Styling
@@ -80,7 +86,6 @@ LABEL_SUBTITLE_FONT = ("Arial", 14, "bold")
 
 # Texto normal e leve
 LABEL_TEXT_FONT = ("Segoe UI", 13)
-LABEL_TEXT_MUTED_FONT = ("Segoe UI", 12)
 
 # Cores
 LABEL_TEXT_COLOR = "#EAEAEA"
@@ -106,6 +111,30 @@ TEXTBOX_TEXT_COLOR = "#EAEAEA"
 TEXTBOX_BORDER_COLOR = "#3F3F46"       
 
 TEXTBOX_PLACEHOLDER_COLOR = "#9CA3AF"  
-TEXTBOX_FOCUS_BORDER_COLOR = "#2563EB" 
+TEXTBOX_FOCUS_BORDER_COLOR = "#A78BFA" 
 
 TEXTBOX_VARIAVEL_TAG_COLOR = "#3B82F6"
+
+# ------------------------
+# 🔧 Scrollbar Styling
+# ------------------------
+
+SCROLLBAR_BUTTON_COLOR = "#3d3751"        
+SCROLLBAR_BUTTON_HOVER_COLOR = "#554b71"
+
+# ------------------------
+# 🔘 Radiobutton Styling
+# ------------------------
+
+RADIOBUTTON_WIDTH = 15
+RADIOBUTTON_HEIGHT = 15
+
+RADIOBUTTON_BORDER_WIDTH = 3
+RADIOBUTTON_CORNER_RADIUS = 100  # Deixa ele redondo
+
+RADIOBUTTON_FONT = ("Segoe UI", 13)
+
+RADIOBUTTON_TEXT_COLOR = "#EAEAEA"
+RADIOBUTTON_SELECTED_COLOR = "#A78BFA"
+RADIOBUTTON_HOVER_COLOR = "#3d3751"
+RADIOBUTTON_BORDER_COLOR = "#9CA3AF"
