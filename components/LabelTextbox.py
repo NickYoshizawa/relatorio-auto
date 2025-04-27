@@ -7,12 +7,15 @@ class LabelTextbox(DefaultFrame):
     def __init__(self, 
         master: Any, 
         text: str = 'Text Label',
+        state: str = 'normal',
+        font_type: str = None,
+        text_type: str = None,
         **kwargs
     ):
         super().__init__(master, **kwargs)
 
-        self.label = DefaultLabel(self, text=text)
-        self.textbox = DefaultTextbox(self)
+        self.label = DefaultLabel(self, text=text, font_type=font_type, text_type=text_type)
+        self.textbox = DefaultTextbox(self, state=state)
         
         self.label.pack(anchor='w', padx=10, pady=(2, 0))
         self.textbox.pack(expand=True, fill='both')
@@ -28,3 +31,6 @@ class LabelTextbox(DefaultFrame):
         
     def highlight_text(self):
         self.textbox.highlight_text()
+        
+    def configure(self, require_redraw=False, **kwargs):
+        return self.textbox.configure(require_redraw, **kwargs)

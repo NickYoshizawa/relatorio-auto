@@ -10,17 +10,19 @@ class LabelEntry(DefaultFrame):
         label_text="Text",
         show=None,
         placeholder_text=None,
+        font_type: str = None,
+        text_type: str = None,
         **kwargs
     ):
 
         super().__init__(master, **kwargs)
 
 
-        self.label = DefaultLabel(self, text=label_text)
-        self.label.pack(anchor='w', padx=(5, 0), pady=(5, 0))
+        self.label = DefaultLabel(self, text=label_text, font_type=font_type, text_type=text_type)
+        self.label.pack(anchor='w')
 
         self.entry = DefaultEntry(self, show=show, placeholder_text=placeholder_text)
-        self.entry.pack(expand=True, fill="x", padx=5, pady=(0, 5))
+        self.entry.pack(expand=True, fill="x")
         
     def insert(self, index: any, string: any):
         self.entry.insert(index, string)

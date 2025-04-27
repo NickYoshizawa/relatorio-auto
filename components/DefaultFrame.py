@@ -25,6 +25,8 @@ class DefaultFrame(ctk.CTkFrame):
     ):
         super().__init__(master, width, height, corner_radius, border_width, bg_color, fg_color, border_color, background_corner_colors, overwrite_preferred_drawing_method, **kwargs)
     
+    def configure(self, require_redraw=False, **kwargs):
+        return super().configure(require_redraw, **kwargs)
 
     
     
