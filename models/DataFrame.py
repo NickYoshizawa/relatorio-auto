@@ -35,8 +35,17 @@ Erro na importação da planilha!
             df.columns = df.iloc[0]
             df = df.drop(df.index[0])
             df.columns = df.columns.infer_objects()
-            print(df.index)
-            print(df.index.tolist())
+            """df.index = [
+                item.strftime('%d/%m/%Y') if isinstance(item, pd.Timestamp)
+                else str(item)
+                for item in df.index
+            ]
+
+            df.columns = [
+                col.strftime('%d/%m/%Y') if isinstance(col, pd.Timestamp)
+                else str(col)
+                for col in df.columns
+            ]"""
             
             try:
                 
@@ -52,8 +61,11 @@ Erro na importação da planilha!
         else:
             try:
                 df = self.df
+
                 first_column = df.columns[0]
-                values = df[self.df[first_column] == field]
+                
+                values = df[df[first_column] == field]
+                
 
                 for header in values:
                     text = text.replace('['+str(header)+']', str(values[header][0]))
