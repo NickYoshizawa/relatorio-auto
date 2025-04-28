@@ -114,6 +114,7 @@ class MainWindow(ctk.CTk):
         
         self.output_textbox.configure(state="normal")
         self.output_textbox.delete("1.0", "end")
+        self.output_textbox.configure(state="disabled")
         
         open('data/msg.txt', 'w').close()
         open('data/inputs.json', 'w').close()
@@ -152,6 +153,7 @@ class MainWindow(ctk.CTk):
             
         update_json('data/inputs.json', data, 2, False)
         
+        self.output_textbox.configure(state="normal")
         self.output_textbox.insert(1.0, df.format_text(msg, field, axis))
         self.output_textbox.configure(state="disabled")
         
