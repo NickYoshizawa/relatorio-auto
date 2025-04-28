@@ -48,6 +48,9 @@ class DefaultTextbox(ctk.CTkTextbox):
 
     def on_focus_out(self, event=None):
         self.configure(border_color=TEXTBOX_BORDER_COLOR)
+    
+    def delete(self, index1, index2=None):
+        return super().delete(index1, index2)
         
     def highlight_text(self, event=None):
         content = self.get("1.0", "end-1c")
