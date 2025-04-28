@@ -1,4 +1,4 @@
 Relatorio do dia 31/03/2010
 
-Ativo Total: [Ativo Total]
-Ativo Circulante: [Ativo Circulante]
+Ativo Total [Ativo Total]
+Ativo Circulante [Ativo Circulante]
