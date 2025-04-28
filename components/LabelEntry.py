@@ -29,4 +29,7 @@ class LabelEntry(DefaultFrame):
     
     def get(self) -> str:
         return self.entry.get()
+    
+    def configure(self, require_redraw=False, **kwargs):
+        return self.entry.configure(require_redraw, **kwargs)
         
