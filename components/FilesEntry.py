@@ -56,3 +56,6 @@ class FilesEntry(DefaultFrame):
             return ''
         else:
             return file
+    
+    def insert_file(self, file: str):
+        self.label.configure(text=file)
