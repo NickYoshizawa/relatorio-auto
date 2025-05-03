@@ -122,9 +122,9 @@ class MainWindow(ctk.CTk):
         file_type = self.file_type_option.get()
         
         if file_type == "sheets":
-            file = self.sheets_entry.get()
+            file_path = self.sheets_entry.get()
         else:
-            file = self.excel_entry.get()
+            file_path = self.excel_entry.get()
         
         field = self.field_entry.get()
         axis = self.field_type_option.get()
@@ -139,10 +139,8 @@ class MainWindow(ctk.CTk):
         if x > 0:
             return
         
-        df = DataFrame(file, file_type)
-        
         data = {
-            'file': file,
+            'file': file_path,
             'file_type': file_type,
             'field': field,
             'axis': axis
@@ -152,6 +150,14 @@ class MainWindow(ctk.CTk):
             file.write(msg)
             
         update_json('data/inputs.json', data, 2, False)
+        
+        df = DataFrame(file_path, file_type)
+        
+        if df.message:
+            self.output_textbox.configure(state="normal")
+            self.output_textbox.insert(1.0, df.message)
+            self.output_textbox.configure(state="disabled")
+            return
         
         self.output_textbox.configure(state="normal")
         self.output_textbox.insert(1.0, df.format_text(msg, field, axis))
