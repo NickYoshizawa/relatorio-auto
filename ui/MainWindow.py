@@ -32,7 +32,7 @@ class MainWindow(ctk.CTk):
         self.geometry('800x550')
         self.minsize(800, 550)
         self.iconbitmap(WINDOW_ICON)
-        self.title('Integração GoogleSheets')
+        self.title('AutoRelatorio')
         
         self.file_radio_frame = DefaultFrame(self, border_width=0)
         self.entrys_frame = DefaultFrame(self, border_width=0)
