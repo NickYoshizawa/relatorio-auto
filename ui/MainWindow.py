@@ -45,7 +45,7 @@ class MainWindow(ctk.CTk):
         self.excel_radio_entry.bind("<Button-1>", self.radio_callback)
         self.sheets_radio_entry.bind("<Button-1>", self.radio_callback)
         
-        self.excel_entry = FilesEntry(self.entrys_frame, filetypes=EXCEL_FILETYPES, height=63, wrap_lenth=400)
+        self.excel_entry = FilesEntry(self.entrys_frame, button_text="Buscar" ,filetypes=EXCEL_FILETYPES, height=63, wrap_lenth=400)
         self.sheets_entry = LabelEntry(self.entrys_frame, label_text='Link da planilha (.CSV):', border_width=0)
         
         self.field_entry = LabelEntry(self.entrys_frame, label_text="Campo:",border_width=0)
@@ -53,12 +53,12 @@ class MainWindow(ctk.CTk):
         self.row_radio_entry = DefaultRadioButton(self.field_type_radio_frame, text="Buscar por linha", value="row", variable=self.field_type_option)
         self.column_radio_entry = DefaultRadioButton(self.field_type_radio_frame, text="Buscar por coluna", value="column", variable=self.field_type_option)
         
-        self.input_textbox = LabelTextbox(self.textboxs_frame, text='Input:', fg_color='transparent')
-        self.output_textbox = LabelTextbox(self.textboxs_frame, text='Output:', fg_color='transparent', state='disabled')
+        self.input_textbox = LabelTextbox(self.textboxs_frame, text='Entrada:', fg_color='transparent')
+        self.output_textbox = LabelTextbox(self.textboxs_frame, text='Saida:', fg_color='transparent', state='disabled')
         
         
         
-        self.submit_button = DefaultButton(self, text='Submit', command=self.start_thread)
+        self.submit_button = DefaultButton(self, text='Gerar', command=self.start_thread)
         
         
         
