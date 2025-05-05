@@ -18,6 +18,7 @@ class FilesEntry(DefaultFrame):
         button_height: int = BUTTON_HEIGHT,
         button_width: int = BUTTON_WIDTH,
         label_text: str = "Escolha um arquivo",
+        button_text: str = "Browse",
         filetypes: Iterable[tuple[str, str | list[str] | tuple[str, ...]]] | None = [("Todos os arquivos", "*.*")],
         **kwargs
     ):
@@ -33,7 +34,7 @@ class FilesEntry(DefaultFrame):
         self.filetypes = filetypes
     
         self.label = DefaultLabel(self, text=self.label_text, wraplength=wrap_lenth)
-        self.button= DefaultButton(self, text='Browse', command=self.__browsefile, height=button_height, width=button_width)
+        self.button= DefaultButton(self, text=button_text, command=self.__browsefile, height=button_height, width=button_width)
         
         self.label.pack(side="left", padx=10, pady=10, fill="both")
         self.button.pack(side="right", padx=10, pady=10)
