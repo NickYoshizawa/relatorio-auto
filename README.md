@@ -79,36 +79,21 @@ Este projeto possui uma versão executável para Windows, que permite rodar o pr
 
 ---
 
-## 🛠️ Como Gerar seu próprio Executável
-
-Caso deseje gerar sua própria versão do `.exe`, siga as instruções:
-
-1. Instale o PyInstaller:
-```bash
-pip install pyinstaller
-```
-
-2. Gere o arquivo:
-```bash
-pyinstaller --noconsole --onefile --icon=assets/icon/icon.ico main.py
-```
-
-O arquivo gerado estará localizado na pasta:
-```
-/dist/main.exe
-```
-
----
-
 ## 🔧 Funcionalidades Principais
 
 - 👁️ Interface moderna e responsiva usando CustomTkinter
-- 📅 Leitura de planilhas Google Sheets (formato CSV) e arquivos Excel (.xlsx, .csv)
+- 📅 Leitura de planilhas Google Sheets (formato CSV) e arquivos Excel (.xlsx)
 - 🔄 Atualização dinâmica de textos substituindo placeholders com dados da planilha
 - 🔢 Busca de dados por **linha** ou **coluna**
 - 📥 Suporte a seleção de arquivos pelo sistema
 - 📤 Armazena inputs e arquivos usados para reuso rápido
 - 📚 Trata erros de forma amigável (ex: arquivo aberto, ausente ou corrompido)
+
+---
+
+# ✨ Exemplo Visual da Interface
+
+![Preview](https://github.com/user-attachments/assets/ffaa2285-987c-44f4-b294-c1f380be1fda)
 
 ---
 
@@ -121,11 +106,6 @@ Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ## 👨‍💻 Desenvolvedor
 
-Feito com ❤️ por **[Seu Nome ou GitHub]**.  
+Feito com ❤️ por **NickYoshizawa**.  
 Se gostou do projeto, deixe uma estrela! ⭐
 
----
-
-# ✨ Exemplo Visual
-
-> "Insira aqui uma imagem/gif de demonstração se desejar futuramente."
