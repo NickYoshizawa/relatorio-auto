@@ -17,8 +17,6 @@ def check_update():
             download_url = data["download_url"]
             changelog = data.get("changelog", "Sem informações.")
             
-            print(data)
-            
             if para == "all":
                 if nova_versao != ATUAL_VERSAO:
                     resposta = messagebox.askyesno(
