@@ -73,9 +73,9 @@ Este projeto possui uma versão executável para Windows, que permite rodar o pr
 
 ### 🔗 Última versão:
 
-👉 [Baixar Executável (.exe) - Versão mais recente](https://github.com/SEU_USUARIO/SEU_REPOSITORIO/releases/latest)
+👉 [Baixar Software (.rar) - Versão mais recente](https://github.com/NickYoshizawa/relatorio-auto/releases/latest)
 
-> **Nota**: Certifique-se de fazer o download do arquivo `.exe` correspondente à última release publicada.
+> **Nota**: Certifique-se de fazer o download do arquivo `.rar` correspondente à última release publicada.
 
 ---
 
