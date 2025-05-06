@@ -13,18 +13,20 @@ def check_update():
         if response.status_code == 200:
             data = response.json()
             nova_versao = data["version"]
+            para = data["for"]
             download_url = data["download_url"]
             changelog = data.get("changelog", "Sem informações.")
-
-            if nova_versao != ATUAL_VERSAO:
-                resposta = messagebox.askyesno(
-                    "Atualização disponível!",
-                    f"Nova versão {nova_versao} disponível!\n\n{changelog}\n\nDeseja atualizar agora?"
-                )
-                if resposta:
-                    baixar_e_instalar(download_url)
-            else:
-                print("Você já está na última versão.")
+            
+            if para == "all":
+                if nova_versao != ATUAL_VERSAO:
+                    resposta = messagebox.askyesno(
+                        "Atualização disponível!",
+                        f"Nova versão {nova_versao} disponível!\n\n{changelog}\n\nDeseja atualizar agora?"
+                    )
+                    if resposta:
+                        baixar_e_instalar(download_url)
+                else:
+                    print("Você já está na última versão.")
     except Exception as e:
         print(f"Erro ao verificar atualização: {e}")
 
