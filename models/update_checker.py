@@ -5,7 +5,7 @@ import zipfile
 import tkinter.messagebox as messagebox
 
 ATUAL_VERSAO = "1.0.0"
-URL_JSON_VERSAO = "https://NickYoshizawa.github.io/relatorio-auto/versao.json"
+URL_JSON_VERSAO = "https://raw.githubusercontent.com/NickYoshizawa/relatorio-auto/refs/heads/main/vesao.json"
 
 def check_update():
     try:
@@ -16,6 +16,8 @@ def check_update():
             para = data["for"]
             download_url = data["download_url"]
             changelog = data.get("changelog", "Sem informações.")
+            
+            print(data)
             
             if para == "all":
                 if nova_versao != ATUAL_VERSAO:
