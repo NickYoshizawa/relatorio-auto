@@ -1,8 +1,8 @@
 [
   {
-    "file": "C:/Users/Nicolas/OneDrive/Planilhas/teste.xlsx",
-    "file_type": "excel",
-    "field": "01/01/2025",
-    "axis": "row"
+    "file": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQROlrblbP4W55BG1emrzVAbPO39QpUlVnOysLaJrTQl1czSwDn3gzM08CPhZHL0MdPeMiJ55QeI046/pub?gid=164667069&single=true&output=csv",
+    "file_type": "sheets",
+    "field": "31/03/2010",
+    "axis": "column"
   }
 ]
