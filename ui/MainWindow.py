@@ -23,10 +23,7 @@ class MainWindow(ctk.CTk):
         super().__init__(**kwargs)
         
         self.file_type_option = ctk.StringVar(value="sheets") 
-        self.field_type_option = ctk.StringVar(value="row") 
-        
-        if os.path.exists('data/token.json'):
-            os.remove('data/token.json')
+        self.field_type_option = ctk.StringVar(value="row")
             
         ctk.set_appearance_mode('dark-blue')
         self.geometry('800x550')
@@ -56,27 +53,35 @@ class MainWindow(ctk.CTk):
         self.input_textbox = LabelTextbox(self.textboxs_frame, text='Entrada:', fg_color='transparent')
         self.output_textbox = LabelTextbox(self.textboxs_frame, text='Saida:', fg_color='transparent', state='disabled')
         
-        
-        
         self.submit_button = DefaultButton(self, text='Gerar', command=self.start_thread)
         
-        
-        
         try:
+
+            if not os.path.exists('data'):
+                os.makedirs('data')
+
+            if not os.path.exists('data/msg.txt'):
+                with open('data/msg.txt', 'w', encoding="utf-8") as file:
+                    file.write('')
+
+            if not os.path.exists('data/inputs.json'):
+                with open('data/inputs.json', 'w', encoding="utf-8") as file:
+                    file.write('[]')
+
             with open('data/msg.txt', 'r', encoding="utf-8") as file:
                 self.input_textbox.insert(1.0, file.read())
                 self.input_textbox.highlight_text()
             with open('data/inputs.json', 'r', encoding="utf-8") as file:
                 json_data = json.loads(file.read())
-                
-                if json_data[0]['file'] != '' and json_data[0]['file_type'] != '' and json_data[0]['field'] != '' and json_data[0]['axis'] != '':
-                    if json_data[0]['file_type'] == "sheets":
-                        self.sheets_entry.insert(0, json_data[0]['file'])
-                    else:
-                        self.excel_entry.insert_file(json_data[0]['file'])
-                    self.file_type_option.set(json_data[0]['file_type'])
-                    self.field_entry.insert(0, json_data[0]['field'])
-                    self.field_type_option.set(json_data[0]['axis'])
+                if json_data and isinstance(json_data, list) and isinstance(json_data[0], dict):
+                    if json_data[0]['file'] != '' and json_data[0]['file_type'] != '' and json_data[0]['field'] != '' and json_data[0]['axis'] != '':
+                        if json_data[0]['file_type'] == "sheets":
+                            self.sheets_entry.insert(0, json_data[0]['file'])
+                        else:
+                            self.excel_entry.insert_file(json_data[0]['file'])
+                        self.file_type_option.set(json_data[0]['file_type'])
+                        self.field_entry.insert(0, json_data[0]['field'])
+                        self.field_type_option.set(json_data[0]['axis'])
         except Exception as e:
             print(e)
         finally:
