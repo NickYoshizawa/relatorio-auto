@@ -1,6 +1,6 @@
 {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "for": "all",
-    "download_url": "https://github.com/NickYoshizawa/relatorio-auto/releases/download/v1.0.0/RelatorioAuto.rar",
-    "changelog": "Primeira Versão."
+    "download_url": "https://github.com/NickYoshizawa/relatorio-auto/releases/download/v1.0.1/RelatorioAuto.rar",
+    "changelog": "Correções simples de estado de botão e cachebuster"
 }
