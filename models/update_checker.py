@@ -3,8 +3,9 @@ import os
 import sys
 import zipfile
 import tkinter.messagebox as messagebox
+from config.theme import ATUAL_VERSAO
 
-ATUAL_VERSAO = "1.0.1"
+
 URL_JSON_VERSAO = "https://raw.githubusercontent.com/NickYoshizawa/relatorio-auto/refs/heads/main/vesao.json"
 
 def check_update():
