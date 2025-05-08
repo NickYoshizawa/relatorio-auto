@@ -1,10 +1,14 @@
 import pandas as pd
+import time
 
 class DataFrame():
     def __init__(self, file: str, type: str) -> None:
 
         self.message = None
         self.df = None
+        
+        timestamp = int(time.time())
+        file = f"{file}&cachebuster={timestamp}"
 
         try:
             if type == "excel":
@@ -53,7 +57,7 @@ class DataFrame():
                 if isinstance(valor, pd.Timestamp):
                     return valor.strftime('%d/%m/%Y')
                 else:
-                    valor_convertido = pd.to_datetime(valor, errors='raise')
+                    valor_convertido = pd.to_datetime(valor, errors='raise', dayfirst=True)
                     return valor_convertido.strftime('%d/%m/%Y')
             except (ValueError, TypeError):
                 return str(valor)
@@ -76,6 +80,9 @@ class DataFrame():
     def format_text(self, text: str, field: str, axis: str,) -> str:
         if self.message:
             return self.message
+        
+        headers = None
+        row_values = None
         
         try:
             if axis == 'column':
