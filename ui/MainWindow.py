@@ -117,6 +117,8 @@ class MainWindow(ctk.CTk):
         
     def submit(self):
         
+        self.submit_button.configure(state="disabled")
+        
         self.output_textbox.configure(state="normal")
         self.output_textbox.delete("1.0", "end")
         self.output_textbox.configure(state="disabled")
@@ -167,6 +169,8 @@ class MainWindow(ctk.CTk):
         self.output_textbox.configure(state="normal")
         self.output_textbox.insert(1.0, df.format_text(msg, field, axis))
         self.output_textbox.configure(state="disabled")
+        
+        self.submit_button.configure(state="normal")
         
     
     def start_thread(self):
