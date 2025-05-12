@@ -1,14 +1,10 @@
 import pandas as pd
-import time
 
 class DataFrame():
     def __init__(self, file: str, type: str) -> None:
 
         self.message = None
         self.df = None
-        
-        timestamp = int(time.time())
-        file = f"{file}&cachebuster={timestamp}"
 
         try:
             if type == "excel":
