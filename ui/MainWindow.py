@@ -117,8 +117,6 @@ class MainWindow(ctk.CTk):
         
     def submit(self):
         
-        self.submit_button.configure(state="disabled")
-        
         self.output_textbox.configure(state="normal")
         self.output_textbox.delete("1.0", "end")
         self.output_textbox.configure(state="disabled")
@@ -146,6 +144,8 @@ class MainWindow(ctk.CTk):
         if x > 0:
             return
         
+        self.submit_button.configure(state="disabled")
+        
         data = {
             'file': file_path,
             'file_type': file_type,
@@ -164,11 +164,10 @@ class MainWindow(ctk.CTk):
             self.output_textbox.configure(state="normal")
             self.output_textbox.insert(1.0, df.message)
             self.output_textbox.configure(state="disabled")
-            return
-        
-        self.output_textbox.configure(state="normal")
-        self.output_textbox.insert(1.0, df.format_text(msg, field, axis))
-        self.output_textbox.configure(state="disabled")
+        else:
+            self.output_textbox.configure(state="normal")
+            self.output_textbox.insert(1.0, df.format_text(msg, field, axis))
+            self.output_textbox.configure(state="disabled")
         
         self.submit_button.configure(state="normal")
         
