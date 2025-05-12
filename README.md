@@ -8,7 +8,7 @@
 
 ---
 
-## 📄 Descrição Curta
+## 📄 Descrição
 
 Aplicativo de desktop para integração e geração automática de relatórios a partir de planilhas Google Sheets ou arquivos Excel locais (.xlsx/.csv), com substituição dinâmica de dados.
 
@@ -77,7 +77,7 @@ Este projeto possui uma versão executável para Windows, que permite rodar o pr
 
 👉 [Baixar Software (.rar) - Versão mais recente](https://github.com/NickYoshizawa/relatorio-auto/releases/latest)
 
-> **Nota**: Certifique-se de fazer o download do arquivo `.rar` correspondente à última release publicada.
+> **Nota**: Certifique-se de fazer o download do arquivo `.zip` correspondente à última release publicada.
 
 ---
 
