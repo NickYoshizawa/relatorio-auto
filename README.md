@@ -1,8 +1,10 @@
 
 # Relatório Automático - Integração Google Sheets / Excel
 
+![Badge de Versão](https://img.shields.io/badge/vers%C3%A3o-1.0-blue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Made with Python](https://img.shields.io/badge/Made%20with-Python-blue.svg)](https://www.python.org/)
+![Badge de Status](https://img.shields.io/badge/status-conclu%C3%ADdo-brightgreen)
 
 ---
 
