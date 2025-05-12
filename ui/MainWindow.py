@@ -29,7 +29,7 @@ class MainWindow(ctk.CTk):
         self.geometry('800x550')
         self.minsize(800, 550)
         self.iconbitmap(WINDOW_ICON)
-        self.title('AutoRelatorio')
+        self.title('Relatório Automático Integração')
         
         self.file_radio_frame = DefaultFrame(self, border_width=0)
         self.entrys_frame = DefaultFrame(self, border_width=0)
